@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import Login from "./components/Login";
 import Home from "./container/Home";
 import { fetchUser } from "./utils/fetchUser";
+import Contact from "./components/contact";
 const App = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -14,6 +15,7 @@ const App = () => {
     <Routes>
       <Route path="login" element={<Login />} />
       <Route path="/*" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 };
